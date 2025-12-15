@@ -4,27 +4,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  
   <!-- Title & Favicon -->
   <title>NJMotCentre</title>
   <link rel="icon" type="image/png" href="/logo.png" />
 
-  <!-- GLOBAL FONT: MONTSERRAT -->
+  <!-- GLOBAL FONT: POPPINS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
-  <!-- Tailwind or any CSS compiled -->
-  <meta name="color-scheme" content="" />
+  <!-- Tailwind CSS (Optional if compiled separately) -->
+  <link href="/dist/output.css" rel="stylesheet">
+
+  <!-- Meta -->
+  <meta name="description" content="NJMotCentre - MOT testing, vehicle repairs, diagnostics, engine tuning, and more." />
+  <meta name="theme-color" content="#000000" />
 </head>
 
-<body style="font-family: 'Montserrat', sans-serif;">
+<body class="font-sans bg-gray-50 text-gray-900" style="font-family: 'Poppins', sans-serif;">
+  <!-- React Root -->
   <div id="root"></div>
 
-  <!-- React Entry File -->
+  <!-- Scripts -->
   <script type="module" src="/src/main.jsx"></script>
 </body>
 
