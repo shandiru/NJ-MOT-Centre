@@ -17,7 +17,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-black overflow-hidden py-28 md:py-36">
+    <section className="relative bg-black overflow-hidden py-28 md:py-36"id="home">
       {/* Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"

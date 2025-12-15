@@ -48,7 +48,7 @@ export default function ServicesDark() {
   ];
 
   return (
-    <section className="py-28 bg-gradient-to-b from-[#020617] to-[#020617]">
+    <section className="py-28 bg-gradient-to-b from-[#020617] to-[#020617]" id="services">
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-down">

@@ -19,12 +19,14 @@ export default function ReviewsSection() {
       id="testimonials"
     >
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{
-          backgroundImage: "url('logo.png')",
-        }}
-      ></div>
+     <div
+  className="absolute inset-0 bg-center bg-no-repeat opacity-100"
+  style={{
+    backgroundImage: "url('logo-new.png')",
+    backgroundSize: "contain", // makes it zoom out instead of cover
+  }}
+></div>
+
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/70"></div>
