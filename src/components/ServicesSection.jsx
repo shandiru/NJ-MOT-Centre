@@ -3,13 +3,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {
-  FaCarSide,
-  FaTools,
-  FaLaptopCode,
-  FaSnowflake,
-  FaCogs,
-} from "react-icons/fa";
+import { FaCarSide, FaTools, FaLaptopCode, FaSnowflake, FaCogs } from "react-icons/fa";
 
 export default function ServicesDark() {
   useEffect(() => {
@@ -22,32 +16,32 @@ export default function ServicesDark() {
 
   const services = [
     {
-      title: "MOT Testing",
-      desc: "Certified MOT Class 4, 5 & 7 testing using approved equipment.",
+      title: "MOT Testing (Class 4, 5 & 7)",
+      desc: "Certified MOT testing for cars and LCVs, ensuring safety and compliance.",
       icon: <FaCarSide />,
       color: "bg-[#0B5ED7]/20",
     },
     {
       title: "Servicing & Repairs",
-      desc: "Professional servicing, repairs, brakes and suspension work.",
+      desc: "Full vehicle servicing and repairs including brakes, suspension, and general maintenance.",
       icon: <FaTools />,
       color: "bg-[#D70C09]/20",
     },
     {
-      title: "Diagnostics & Tuning",
-      desc: "Advanced diagnostics, fault finding and engine tuning.",
+      title: "Engine Tuning",
+      desc: "Professional engine tuning and performance optimization for better efficiency and power.",
       icon: <FaLaptopCode />,
       color: "bg-[#11CDEF]/20",
     },
     {
       title: "Air Con Re-Gas",
-      desc: "Full air conditioning service for optimal cooling.",
+      desc: "Complete air conditioning servicing and re-gas for optimal cooling performance.",
       icon: <FaSnowflake />,
       color: "bg-[#F7B500]/20",
     },
     {
       title: "Wet Belt Services",
-      desc: "Specialist wet belt inspection and replacement.",
+      desc: "Inspection and replacement of wet belts to ensure smooth operation of your engine.",
       icon: <FaCogs />,
       color: "bg-[#6F42C1]/20",
     },
@@ -59,15 +53,11 @@ export default function ServicesDark() {
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-down">
           <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-white mb-3">
-            Our <span style={{ color: "var(--primary)" }}>Services</span>
+            Our <span className="text-[#D70C09]">Services</span>
           </h2>
-          <div
-            className="w-24 h-[3px] mx-auto"
-            style={{ backgroundColor: "var(--accent)" }}
-          />
+          <div className="w-24 h-[3px] mx-auto bg-[#0B5ED7]" />
           <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
-            Delivering top-quality MOT, servicing, and diagnostic services with
-            experience, honesty, and trust.
+            Delivering top-quality MOT testing, servicing, engine tuning, air con re-gas, and wet belt services with honesty and trust.
           </p>
         </div>
 
@@ -108,9 +98,7 @@ export default function ServicesDark() {
               Trusted MOT & Vehicle Specialists
             </h3>
             <p className="text-slate-300 max-w-2xl mx-auto mb-8">
-              With modern diagnostic tools and experienced technicians, we
-              deliver reliable MOT testing, repairs, and servicing with honest
-              advice and fast turnaround times.
+              Modern diagnostic tools and experienced technicians ensure reliable MOT testing, repairs, and servicing with honest advice and fast turnaround times.
             </p>
             <ul className="space-y-2 text-sm text-slate-300">
               <li>✔ DVSA Approved MOT Centre</li>
