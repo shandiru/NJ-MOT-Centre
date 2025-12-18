@@ -17,7 +17,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-black overflow-hidden py-28 md:py-36"id="home">
+    <section className="relative bg-black overflow-hidden py-28 md:py-36" id="home">
       {/* Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
@@ -79,11 +79,11 @@ export default function HeroSection() {
             </a>
           </div>
 
-          {/* FEATURES WITH ICONS */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-20">
+          {/* FEATURES WITH SEPARATE TRANSPARENT BOXES */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
             {/* MOT */}
             <div
-              className="text-center"
+              className="text-center p-6 rounded-xl bg-gray-800/40"
               data-aos="fade-up"
               data-aos-delay="600"
             >
@@ -106,7 +106,7 @@ export default function HeroSection() {
 
             {/* Repairs */}
             <div
-              className="text-center"
+              className="text-center p-6 rounded-xl bg-gray-800/40"
               data-aos="fade-up"
               data-aos-delay="800"
             >
@@ -127,9 +127,9 @@ export default function HeroSection() {
               </p>
             </div>
 
-            {/* Air Con */}
+            {/* Engine Tuning */}
             <div
-              className="text-center"
+              className="text-center p-6 rounded-xl bg-gray-800/40"
               data-aos="fade-up"
               data-aos-delay="1000"
             >
@@ -146,10 +146,11 @@ export default function HeroSection() {
                 Engine Tuning
               </h3>
               <p className="text-sm text-gray-300">
-              Professional engine tuning to maximize power and improve fuel efficiency.
+                Professional engine tuning to maximize power and improve fuel efficiency.
               </p>
             </div>
           </div>
+          {/* END FEATURES BOXES */}
         </div>
       </div>
     </section>

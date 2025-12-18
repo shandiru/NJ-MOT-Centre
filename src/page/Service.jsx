@@ -1,10 +1,10 @@
 import React from "react";
 
 // Sections from components/HomePage
-import WheelTyreHero from "../Service/WheelTyreHero";
-import WheelAlignmentServices from "../Service/WheelAlignmentServices";
+import WheelTyreHero from "../Service/Hero";
+import WheelAlignmentServices from "../Service/Services";
 import TyreServices from "../Service/TyreServices";
-import WhyAlignmentSection from "../Service/WhyAlignmentSection";
+
 import EmergencyCTA from "../Service/EmergencyCTA";
 
 export default function Service() {
@@ -12,20 +12,20 @@ export default function Service() {
     <div>
       {/* Hero */}
       <section >
-       {/* <WheelTyreHero /> */}
+       <WheelTyreHero />
       </section>
          <section >
-       {/* <WheelAlignmentServices /> */}
+       <WheelAlignmentServices />
       </section>
         <section >
        <TyreServices />
       </section>
         <section >
-       {/* <WhyAlignmentSection /> */}
+    
       </section>
 
        <section >
-       {/* <EmergencyCTA /> */}
+       <EmergencyCTA />
       </section>
 
 

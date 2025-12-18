@@ -1,14 +1,14 @@
-// File: EmergencyCTA.jsx
 "use client";
 import React from "react";
 import { FaPhone } from "react-icons/fa";
 
+// Updated color palette for N&J MOT Centre
 const palette = {
-  primary: "#3F8D3A",          // solid green background
-  fgOnPrimary: "#FFFFFF",      // white text on green
-  secondaryBg: "#B9C26D",      // olive call button
-  secondaryText: "#1F2A10",    // dark text on olive
-  outline: "#FFFFFF",          // white outline for secondary button
+  primary: "#0B5ED7",        // primary blue background
+  fgOnPrimary: "#FFFFFF",    // white text on blue
+  secondaryBg: "#D70C09",    // red call button
+  secondaryText: "#FFFFFF",  // white text on red button
+  outline: "#FFFFFF",         // white outline for secondary button
 };
 
 export default function EmergencyCTA() {
@@ -18,17 +18,19 @@ export default function EmergencyCTA() {
       style={{ backgroundColor: palette.primary, color: palette.fgOnPrimary }}
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Updated Title */}
         <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-          Book Your Wheel Alignment Service Today
+          Book Your Vehicle MOT & Service Today
         </h2>
 
+        {/* Updated Description */}
         <p className="text-xl mb-8 opacity-90">
-          Professional service from qualified technicians using the latest alignment technology
+          N&J MOT Centre in Skegness provides expert MOT testing, servicing, and repairs for all vehicles. Call our friendly team or request a quote online today!
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {/* Call button */}
-          <a href="tel:+441623623759" className="inline-block">
+          <a href="tel:07746479840" className="inline-block">
             <button
               className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold transition-all duration-300"
               style={{
@@ -36,14 +38,14 @@ export default function EmergencyCTA() {
                 color: palette.secondaryText,
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = "0 6px 20px rgba(47,125,51,0.45)";
+                e.currentTarget.style.boxShadow = "0 6px 20px rgba(215,12,9,0.45)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
               <FaPhone className="h-5 w-5" />
-              Call +44 1623 623759
+              Call 07746 479840
             </button>
           </a>
 
@@ -56,12 +58,12 @@ export default function EmergencyCTA() {
               borderColor: palette.outline,
             }}
             onClick={() => {
-              window.location.href = "/contact";
+              window.location.href = "/#contact";
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = palette.fgOnPrimary;
               e.currentTarget.style.color = palette.primary;
-              e.currentTarget.style.boxShadow = "0 6px 20px rgba(47,125,51,0.35)";
+              e.currentTarget.style.boxShadow = "0 6px 20px rgba(11,94,215,0.35)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = "transparent";

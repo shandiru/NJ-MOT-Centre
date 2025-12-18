@@ -93,28 +93,40 @@ export default function ServicesDark() {
           ))}
         </div>
 
-        {/* Feature Banner */}
-        <div
-          className="mt-20 relative rounded-lg overflow-hidden border border-slate-800 p-12 text-center"
-          data-aos="fade-up"
-        >
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#0B5ED7]/20 via-transparent to-[#D70C09]/20" />
-          <div className="relative z-10">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Trusted MOT & Vehicle Specialists
-            </h3>
-            <p className="text-slate-300 max-w-2xl mx-auto mb-8">
-              Modern diagnostic tools and experienced technicians ensure reliable MOT
-              testing, repairs, and servicing with honest advice and fast turnaround times.
-            </p>
-            <ul className="space-y-2 text-sm text-slate-300">
-              <li>✔ DVSA Approved MOT Centre</li>
-              <li>✔ Modern Diagnostic Equipment</li>
-              <li>✔ Transparent Pricing</li>
-              <li>✔ Customer-First Service</li>
-            </ul>
-          </div>
-        </div>
+       {/* Feature Banner */}
+<div
+  className="mt-20 relative rounded-lg overflow-hidden border border-slate-800 p-12 text-center"
+  data-aos="fade-up"
+>
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-tr from-[#0B5ED7]/20 via-transparent to-[#D70C09]/20" />
+
+  {/* Content */}
+  <div className="relative z-10">
+    {/* Heading */}
+    <h3 className="text-3xl font-bold text-white mb-4">
+      Trusted MOT & Vehicle Specialists
+    </h3>
+
+    {/* Description */}
+    <p className="text-slate-300 max-w-2xl mx-auto mb-8">
+      Modern diagnostic tools and experienced technicians ensure reliable MOT
+      testing, repairs, and servicing with honest advice and fast turnaround times.
+    </p>
+
+    {/* Features List */}
+    <ul className="space-y-2 text-sm text-slate-300 flex flex-col items-center">
+      {/* Replace text with image */}
+      <li className="mb-2">
+        <img src="/dvs.png" alt="DVSA Approved" className="w-24 h-auto mx-auto" />
+      </li>
+      <li>✔ Modern Diagnostic Equipment</li>
+      <li>✔ Transparent Pricing</li>
+      <li>✔ Customer-First Service</li>
+    </ul>
+  </div>
+</div>
+
       </div>
     </section>
   );
