@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaCarSide, FaTools, FaLaptopCode, FaSnowflake, FaCogs } from "react-icons/fa";
+import { FaCarSide, FaTools, FaSnowflake } from "react-icons/fa";
 
 export default function ServicesDark() {
   useEffect(() => {
@@ -19,31 +19,36 @@ export default function ServicesDark() {
       title: "MOT Testing (Class 4, 5 & 7)",
       desc: "Certified MOT testing for cars and LCVs, ensuring safety and compliance.",
       icon: <FaCarSide />,
-      color: "bg-[#0B5ED7]/20",
+      color: "bg-[#0B5ED7]/20",   // BLUE bg
+      iconColor: "#0B5ED7",       // BLUE icon
     },
     {
       title: "Servicing & Repairs",
-      desc: "Full vehicle servicing and repairs including brakes, suspension, and general maintenance.",
+      desc: "Full vehicle servicing and repairs including brakes, suspension, and maintenance.",
       icon: <FaTools />,
-      color: "bg-[#D70C09]/20",
+      color: "bg-[#D70C09]/20",   // RED bg
+      iconColor: "#D70C09",       // RED icon
     },
     {
       title: "Engine Tuning",
-      desc: "Professional engine tuning and performance optimization for better efficiency and power.",
-      icon: <FaLaptopCode />,
-      color: "bg-[#11CDEF]/20",
+      desc: "Professional engine tuning and performance optimization to enhance efficiency and power.",
+      icon: <FaCarSide />,
+      color: "bg-[#0B5ED7]/20",   // BLUE bg
+      iconColor: "#0B5ED7",       // BLUE icon
     },
     {
       title: "Air Con Re-Gas",
       desc: "Complete air conditioning servicing and re-gas for optimal cooling performance.",
       icon: <FaSnowflake />,
-      color: "bg-[#F7B500]/20",
+      color: "bg-[#D70C09]/20",   // RED bg
+      iconColor: "#D70C09",       // RED icon
     },
     {
       title: "Wet Belt Services",
-      desc: "Inspection and replacement of wet belts to ensure smooth operation of your engine.",
-      icon: <FaCogs />,
-      color: "bg-[#6F42C1]/20",
+      desc: "Inspection and replacement of wet belts to ensure smooth engine operation.",
+      icon: <FaTools />,
+      color: "bg-[#0B5ED7]/20",   // BLUE bg
+      iconColor: "#0B5ED7",       // BLUE icon
     },
   ];
 
@@ -57,7 +62,8 @@ export default function ServicesDark() {
           </h2>
           <div className="w-24 h-[3px] mx-auto bg-[#0B5ED7]" />
           <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
-            Delivering top-quality MOT testing, servicing, engine tuning, air con re-gas, and wet belt services with honesty and trust.
+            Delivering top-quality MOT testing, servicing, engine tuning, air con re-gas,
+            and wet belt services with honesty and trust.
           </p>
         </div>
 
@@ -73,7 +79,7 @@ export default function ServicesDark() {
               {/* Icon */}
               <div
                 className={`h-14 w-14 flex items-center justify-center rounded-lg text-2xl mb-4 ${service.color}`}
-                style={{ color: "var(--primary)" }}
+                style={{ color: service.iconColor }}
               >
                 {service.icon}
               </div>
@@ -98,7 +104,8 @@ export default function ServicesDark() {
               Trusted MOT & Vehicle Specialists
             </h3>
             <p className="text-slate-300 max-w-2xl mx-auto mb-8">
-              Modern diagnostic tools and experienced technicians ensure reliable MOT testing, repairs, and servicing with honest advice and fast turnaround times.
+              Modern diagnostic tools and experienced technicians ensure reliable MOT
+              testing, repairs, and servicing with honest advice and fast turnaround times.
             </p>
             <ul className="space-y-2 text-sm text-slate-300">
               <li>✔ DVSA Approved MOT Centre</li>

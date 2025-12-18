@@ -143,10 +143,10 @@ export default function HeroSection() {
                 <FaSnowflake />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">
-                Air Con Re-Gas
+                Engine Tuning
               </h3>
               <p className="text-sm text-gray-300">
-                Professional A/C servicing for all vehicle types.
+              Professional engine tuning to maximize power and improve fuel efficiency.
               </p>
             </div>
           </div>
