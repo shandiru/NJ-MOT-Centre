@@ -22,7 +22,7 @@ export default function ReviewsSection() {
      <div
   className="absolute inset-0 bg-center bg-no-repeat opacity-100"
   style={{
-    backgroundImage: "url('logo-new.png')",
+    backgroundImage: "url('logo.png')",
     backgroundSize: "contain", // makes it zoom out instead of cover
   }}
 ></div>
