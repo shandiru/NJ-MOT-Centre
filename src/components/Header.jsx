@@ -113,7 +113,7 @@ export default function Header() {
                 <HashLink smooth to="/#about" scroll={scrollWithOffset} className="text-gray-300 hover:text-white transition-colors">
                   About
                 </HashLink>
-                <HashLink smooth to="/#services" scroll={scrollWithOffset} className="text-gray-300 hover:text-white transition-colors">
+                <HashLink smooth to="/service" scroll={scrollWithOffset} className="text-gray-300 hover:text-white transition-colors">
                   Services
                 </HashLink>
                 <HashLink smooth to="/#testimonials" scroll={scrollWithOffset} className="text-gray-300 hover:text-white transition-colors">
