@@ -53,7 +53,7 @@ export default function HeroSection() {
               className="h-12 px-10 rounded-md text-white font-medium flex items-center justify-center transition hover:brightness-110"
               style={{ backgroundColor: "var(--primary)" }}
             >
-              Book MOT / Service
+              Book Now
             </button>
 
             <a
