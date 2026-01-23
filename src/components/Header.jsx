@@ -35,6 +35,7 @@ export default function Header() {
                 src="/logo.png"
                 alt="Broadway"
                 className="rounded-full w-full h-14 lg:w-full lg:h-16 flex-shrink-0"
+                loading="lazy"
               />
             </div>
 

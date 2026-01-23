@@ -18,6 +18,7 @@ export default function Footer() {
               src="/logo.png"
               alt="N&J MOT Centre Logo"
               className="h-12 w-auto mb-4"
+              loading="lazy"
             />
 
             <h2 className="text-2xl font-bold brand-gradient">

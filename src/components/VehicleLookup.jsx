@@ -62,7 +62,7 @@ export default function VehicleSearch() {
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* LEFT SIDE TEXT */}
         <div className="text-center lg:text-left space-y-6" data-aos="fade-right">
-          <img src="/logo.png" alt="Logo" className="mx-auto lg:mx-0 w-64 opacity-90" />
+          <img src="/logo.png" loading="lazy"  alt="Logo" className="mx-auto lg:mx-0 w-64 opacity-90" />
 
           <p className="text-xl tracking-wide text-gray-400">Get a quote:</p>
 

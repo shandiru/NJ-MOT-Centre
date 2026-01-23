@@ -118,7 +118,7 @@ export default function ServicesDark() {
     <ul className="space-y-2 text-sm text-slate-300 flex flex-col items-center">
       {/* Replace text with image */}
       <li className="mb-2">
-        <img src="/dvs.png" alt="DVSA Approved" className="w-24 h-auto mx-auto" />
+        <img src="/dvs.png" alt="DVSA Approved" loading="lazy"  className="w-24 h-auto mx-auto" />
       </li>
       <li>✔ Modern Diagnostic Equipment</li>
       <li>✔ Transparent Pricing</li>
