@@ -56,43 +56,43 @@ export default function ReviewsSection() {
         {/* Reviews Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
   <ReviewCard
-    text={`Had a Stage 1 remap done on my car today at N&J MOT Centre. This guy really knows his stuff when it comes to engine tuning—he talked me through all the options and explained everything clearly. The car feels like a rocket now! I’ll see you in March for my MOT and service. Thanks again, mate.`}
-    name="Joe Cavanagh"
+    text={`I visited this garage today (5/01/26) For a service the garage was fantastic the people were friendly helpful and knowledgeable, I will be using this place from now on 100% recommend`}
+    name="Stuart Mosley"
     dataAos="fade-up"
     delay={0}
   />
 
   <ReviewCard
-    text={`Sorted the van out for us today after having lots of problems. Got us straight in when we asked. Was always kept informed of everything along the way. And best of all Neil took it and brought it back to me at home.`}
-    name="Adam Edge"
+    text={`Service and MOT today fantastic service. Picked up car early and dropped off when done. Quality service and great prices `}
+    name="Helen Fisher-Mack"
     dataAos="fade-down"
     delay={100}
   />
 
   <ReviewCard
-    text={`It’s difficult to find a garage to service a large motorhome but look no further I had mine fully serviced & MOT on the same day amazing service they know what they are doing give them a try they are very helpful 👍👍`}
-    name="Eileen Cavanagh"
+    text={`I had a fantastic experience at this garage. The team was friendly, professional, and knowledgeable. The guy diagnosed the issue quickly, explained everything in simple terms, and completed the repair sooner than expected. Pricing was fair, and the quality of the work is spot on.`}
+    name="Katie Twyford"
     dataAos="fade-up"
     delay={200}
   />
 
   <ReviewCard
-    text={`Amazing place and great service! Staff were friendly, super helpful. Definitely recommend!`}
-    name="Sarah S"
+    text={`Chose here for great reviews, wasn't disappointed, mot failed, next day sorted, very polite and courteous, feel you knew them for years.`}
+    name="Tony Minelli"
     dataAos="fade-down"
     delay={300}
   />
 
   <ReviewCard
-    text={`I took my Van to these guys as there was some noises that I didn't know what it was they figured out the problem. Fixed it, fair prices, fab customer services and mechanic.`}
-    name="James Bonser"
+    text={`Amazing place and great service! Staff were friendly, super helpful. Definitely recommend!`}
+    name="Sarah S"
     dataAos="fade-up"
     delay={400}
   />
 
   <ReviewCard
-    text={`Fantastic Service from start to finish. Detailed breakdown and explanation of what is required and why. Couldn't ask for more. Would highly recommend N&J MOT centre.`}
-    name="Jon Curtis"
+    text={`Fantastic garage took my car for mot they called and discussed any issues and got my car fixed so it would pass best garage in skeg wouldn't go anywhere else from now on!`}
+    name="Melanie Hartopp"
     dataAos="fade-down"
     delay={500}
   />

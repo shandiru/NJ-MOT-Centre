@@ -30,7 +30,7 @@ export default function EmergencyCTA() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {/* Call button */}
-          <a href="tel:07746479840" className="inline-block">
+          <a href="tel:01754879008" className="inline-block">
             <button
               className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold transition-all duration-300"
               style={{
@@ -45,7 +45,7 @@ export default function EmergencyCTA() {
               }}
             >
               <FaPhone className="h-5 w-5" />
-              Call 07746 479840
+              Call 01754879008
             </button>
           </a>
 

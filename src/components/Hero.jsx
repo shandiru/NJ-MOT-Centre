@@ -5,8 +5,8 @@ import "aos/dist/aos.css";
 import { FaCar, FaTools, FaSnowflake, FaTimes } from "react-icons/fa";
 
 export default function HeroSection() {
-  const PHONE = "07746 479840";
-  const TEL_LINK = "tel:07746479840";
+  const PHONE = "01754879008";
+  const TEL_LINK = "tel:01754879008";
   const BOOKING_URL = "https://www.bookinmycar.co.uk/book_online/?key=17-987w54-soiubs0r780bu0erwgh4S00587309f09f8g09bndorlfs-89048f&g=1&sl=fbKXB";
 
   // State to control Popup

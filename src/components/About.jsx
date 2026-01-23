@@ -38,10 +38,7 @@ export default function AboutSectionModern() {
           />
 
           <p className="mt-6 text-lg text-[#CBD5E1] leading-relaxed">
-            We are a trusted MOT and vehicle service centre delivering
-            professional workmanship, honest advice, and reliable results.
-            From MOT testing to advanced diagnostics, we keep your vehicle
-            safe and road legal.
+          We are a trusted, family-run MOT and vehicle service centre with over 20 years of experience, delivering professional workmanship, honest advice, and reliable results. From MOT testing to advanced diagnostics, we keep your vehicle safe, reliable, and fully road legal.
           </p>
         </div>
 
