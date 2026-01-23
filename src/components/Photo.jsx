@@ -3,8 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Masonry from "../components/Masonry";
 import InteractiveViewer from "../components/InteractiveViewer";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 export default function Gallery() {
  const items = [
@@ -31,13 +30,7 @@ export default function Gallery() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   // Initialize AOS animations
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: "ease-out-cubic",
-    });
-  }, []);
+
 
   return (
     <>

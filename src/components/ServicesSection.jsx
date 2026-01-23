@@ -1,18 +1,11 @@
 
 
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import { FaCarSide, FaTools, FaSnowflake } from "react-icons/fa";
 
 export default function ServicesDark() {
-  useEffect(() => {
-    AOS.init({
-      duration: 900,
-      easing: "ease-out-cubic",
-      once: true,
-    });
-  }, []);
+
 
   const services = [
     {

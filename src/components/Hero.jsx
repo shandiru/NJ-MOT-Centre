@@ -1,7 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import { FaCar, FaTools, FaSnowflake, FaTimes } from "react-icons/fa";
 
 export default function HeroSection() {
@@ -12,13 +11,7 @@ export default function HeroSection() {
   // State to control Popup
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-out-cubic",
-      once: false,
-    });
-  }, []);
+ 
 
   return (
     <section className="relative bg-black overflow-hidden py-28 md:py-36" id="home">
