@@ -1,9 +1,26 @@
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
 export default function NandJServices() {
-  const services = [
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ const services = [
     {
       key: "mot",
       title: "MOT Testing (Class 4, 5 & 7)",
@@ -127,13 +144,22 @@ export default function NandJServices() {
   ];
 
   const [activeService, setActiveService] = useState(services[0]);
+  const contentRef = useRef(null);
+
+  const handleServiceClick = (service) => {
+    setActiveService(service);
+    // On mobile, scroll down to the content when a box is clicked
+    if (window.innerWidth < 768) {
+        contentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <section className="py-16" style={{ backgroundColor: "#020617", color: "#FFFFFF" }}>
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Title */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: "#0B5ED7" }}>
             Professional Services
           </h2>
@@ -142,35 +168,41 @@ export default function NandJServices() {
           </p>
         </div>
 
-        {/* Service Boxes */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+        {/* Service Boxes - Carousel on Mobile, Grid on Desktop */}
+        <div 
+          className="flex md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 mb-16 overflow-x-auto pb-4 snap-x no-scrollbar"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
           {services.map((s) => (
             <div
               key={s.key}
-              onClick={() => setActiveService(s)}
-              className={`cursor-pointer rounded-2xl border px-6 py-8 text-center transition hover:scale-105`}
+              onClick={() => handleServiceClick(s)}
+              className={`cursor-pointer rounded-2xl border px-6 py-8 text-center transition-all flex-shrink-0 w-[280px] md:w-auto snap-center
+                ${activeService.key === s.key ? "scale-100" : "scale-95 opacity-70"}`}
               style={{
                 borderColor: "#1E293B",
                 backgroundColor: activeService.key === s.key ? "#0B5ED7" : "#0B0E18",
               }}
             >
-              <h3 className="font-bold mb-2" style={{ color: activeService.key === s.key ? "#FFFFFF" : "#0B5ED7" }}>
+              <h3 className="font-bold mb-2 text-lg" style={{ color: activeService.key === s.key ? "#FFFFFF" : "#0B5ED7" }}>
                 {s.title}
               </h3>
-              <p className="text-sm" style={{ color: "#94A3B8" }}>{s.desc}</p>
+              <p className="text-sm" style={{ color: activeService.key === s.key ? "#E2E8F0" : "#94A3B8" }}>
+                {s.desc}
+              </p>
             </div>
           ))}
         </div>
 
         {/* Dynamic Content */}
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div ref={contentRef} className="grid lg:grid-cols-2 gap-12 pt-4">
 
           {/* WHY + BENEFITS */}
           <div>
             <h3 className="text-3xl font-bold mb-3" style={{ color: "#0B5ED7" }}>
               {activeService.whyTitle}
             </h3>
-            <p className="mb-6" style={{ color: "#94A3B8" }}>
+            <p className="mb-6 leading-relaxed" style={{ color: "#94A3B8" }}>
               {activeService.whyDesc}
             </p>
 
@@ -181,8 +213,8 @@ export default function NandJServices() {
             <div className="grid sm:grid-cols-2 gap-4">
               {activeService.benefits.map((item, i) => (
                 <div key={i} className="flex gap-2 items-start">
-                  <FaCheckCircle className="mt-1" style={{ color: "#0B5ED7" }} />
-                  <span>{item}</span>
+                  <FaCheckCircle className="mt-1 flex-shrink-0" style={{ color: "#0B5ED7" }} />
+                  <span className="text-sm md:text-base">{item}</span>
                 </div>
               ))}
             </div>
@@ -193,15 +225,25 @@ export default function NandJServices() {
             <h4 className="text-2xl font-bold mb-4" style={{ color: "#D70C09" }}>
               {activeService.signsTitle}
             </h4>
-            <ul className="space-y-3" style={{ color: "#94A3B8" }}>
+            <ul className="space-y-4" style={{ color: "#94A3B8" }}>
               {activeService.signs.map((sign, i) => (
-                <li key={i}>• {sign}</li>
+                <li key={i} className="flex gap-3">
+                  <span style={{ color: "#D70C09" }}>•</span> 
+                  {sign}
+                </li>
               ))}
             </ul>
           </div>
 
         </div>
       </div>
+
+      {/* CSS to hide scrollbar but keep functionality */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      `}} />
     </section>
   );
 }
+
