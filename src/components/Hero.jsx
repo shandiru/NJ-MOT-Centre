@@ -17,13 +17,15 @@ export default function HeroSection() {
     <section className="relative bg-black overflow-hidden py-28 md:py-36" id="home">
       {/* Video Background */}
       <video
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full object-cover"
         src="/video.mp4"
         autoPlay
         loop
         muted
         playsInline
-      />
+        poster="/fall.png"
+        onError={(e) => (e.currentTarget.style.display = "none")}
+      ></video>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-0"></div>
