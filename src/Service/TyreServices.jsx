@@ -1,11 +1,11 @@
 
- import React, { useState, useRef } from "react";
-import { FaCheckCircle, FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
+
+  import React, { useState, useRef } from "react";
+import { FaCheckCircle, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function NandJServices() {
-  
- 
- const services = [
+  const services = [
     {
       key: "mot",
       title: "MOT Testing (Class 4, 5 & 7)",
@@ -128,15 +128,22 @@ export default function NandJServices() {
     },
   ];
 
+
   const [activeService, setActiveService] = useState(services[0]);
   const scrollRef = useRef(null);
   const contentRef = useRef(null);
 
-  // Function to handle arrow clicks
+  // Improved scroll function to move exactly ONE box at a time
   const scroll = (direction) => {
     if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current;
-      const scrollTo = direction === "left" ? scrollLeft - clientWidth : scrollLeft + clientWidth;
+      const card = scrollRef.current.querySelector("div"); // Get the first card
+      const cardWidth = card.clientWidth + 16; // Card width + gap (16px / gap-4)
+      const currentScroll = scrollRef.current.scrollLeft;
+      
+      const scrollTo = direction === "left" 
+        ? currentScroll - cardWidth 
+        : currentScroll + cardWidth;
+
       scrollRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
     }
   };
@@ -151,38 +158,49 @@ export default function NandJServices() {
   return (
     <section className="py-16" style={{ backgroundColor: "#020617", color: "#FFFFFF" }}>
       <div className="max-w-7xl mx-auto px-4">
+        
         {/* Title */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-6">
           <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: "#0B5ED7" }}>
             Professional Services
           </h2>
           <p className="max-w-3xl mx-auto" style={{ color: "#94A3B8" }}>
-            Expert vehicle servicing, repairs, diagnostics, and maintenance solutions for all makes and models.
+            Expert vehicle solutions for all makes and models.
           </p>
         </div>
 
         {/* Carousel Wrapper */}
-        <div className="relative group mb-16">
-          {/* Left Arrow - Hidden on Desktop */}
-          <button
-            onClick={() => scroll("left")}
-            className="absolute left-[-15px] top-1/2 -translate-y-1/2 z-10 bg-[#0B5ED7] p-3 rounded-full shadow-lg md:hidden"
-          >
-            <FaArrowLeft size={14} />
-          </button>
+        <div className="relative mb-12">
+          
+          {/* ARROW NAVIGATION (Visible on Mobile Only) */}
+          <div className="flex md:hidden justify-end gap-2 mb-4">
+            <button
+              onClick={() => scroll("left")}
+              className="bg-slate-800 hover:bg-[#0B5ED7] text-white p-3 rounded-full transition-colors border border-slate-700"
+              aria-label="Previous"
+            >
+              <FaChevronLeft size={18} />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              className="bg-slate-800 hover:bg-[#0B5ED7] text-white p-3 rounded-full transition-colors border border-slate-700"
+              aria-label="Next"
+            >
+              <FaChevronRight size={18} />
+            </button>
+          </div>
 
           {/* Service Boxes Container */}
           <div
             ref={scrollRef}
-            className="flex md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 overflow-x-auto pb-4 snap-x no-scrollbar"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            className="flex md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 overflow-x-auto pb-6 snap-x snap-mandatory no-scrollbar"
           >
             {services.map((s) => (
               <div
                 key={s.key}
                 onClick={() => handleServiceClick(s)}
-                className={`cursor-pointer rounded-2xl border px-6 py-8 text-center transition-all flex-shrink-0 w-[280px] md:w-auto snap-center
-                ${activeService.key === s.key ? "scale-100 ring-2 ring-[#0B5ED7]" : "scale-95 opacity-60"}`}
+                className={`cursor-pointer rounded-2xl border px-6 py-8 text-center transition-all flex-shrink-0 w-[85%] md:w-auto snap-center
+                ${activeService.key === s.key ? "ring-2 ring-[#0B5ED7] opacity-100" : "opacity-50"}`}
                 style={{
                   borderColor: "#1E293B",
                   backgroundColor: activeService.key === s.key ? "#0B5ED7" : "#0B0E18",
@@ -197,19 +215,10 @@ export default function NandJServices() {
               </div>
             ))}
           </div>
-
-          {/* Right Arrow - Hidden on Desktop */}
-          <button
-            onClick={() => scroll("right")}
-            className="absolute right-[-15px] top-1/2 -translate-y-1/2 z-10 bg-[#0B5ED7] p-3 rounded-full shadow-lg md:hidden"
-          >
-            <FaArrowRight size={14} />
-          </button>
         </div>
 
         {/* Dynamic Content */}
-        <div ref={contentRef} className="grid lg:grid-cols-2 gap-12 pt-4 border-t border-slate-800">
-          {/* WHY + BENEFITS */}
+        <div ref={contentRef} className="grid lg:grid-cols-2 gap-12 pt-8 border-t border-slate-800">
           <div>
             <h3 className="text-3xl font-bold mb-3" style={{ color: "#0B5ED7" }}>
               {activeService.whyTitle}
@@ -232,7 +241,6 @@ export default function NandJServices() {
             </div>
           </div>
 
-          {/* SIGNS */}
           <div className="rounded-xl border p-8" style={{ backgroundColor: "#0B0E18", borderColor: "#1E293B" }}>
             <h4 className="text-2xl font-bold mb-4" style={{ color: "#D70C09" }}>
               {activeService.signsTitle}
@@ -256,5 +264,3 @@ export default function NandJServices() {
     </section>
   );
 }
- 
- 
