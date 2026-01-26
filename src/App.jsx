@@ -11,7 +11,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import GDPRBanner from "./components/GDPRBanner";
 import Service from "./page/Service";
-
+import ScrollToHash from "../src/components/ScrollToHash"
 function App() {
   useEffect(() => {
     AOS.init({
@@ -24,6 +24,7 @@ function App() {
 
   return (
     <Router>
+       <ScrollToHash />
       <ScrollToTop />
       <Header />
 
