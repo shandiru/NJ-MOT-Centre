@@ -15,7 +15,7 @@ export default function Service() {
        <WheelTyreHero />
       </section>
          <section >
-       <WheelAlignmentServices />
+       {/* <WheelAlignmentServices /> */}
       </section>
         <section >
        <TyreServices />

@@ -1,47 +1,50 @@
-
-
-import React, { useEffect } from "react";
-
+import React from "react";
+import { useNavigate } from "react-router-dom"; // Import the hook
 import { FaCarSide, FaTools, FaSnowflake } from "react-icons/fa";
 
 export default function ServicesDark() {
-
+  const navigate = useNavigate(); // Initialize navigation
 
   const services = [
     {
       title: "MOT Testing (Class 4, 5 & 7)",
       desc: "Certified MOT testing for cars and LCVs, ensuring safety and compliance.",
       icon: <FaCarSide />,
-      color: "bg-[#0B5ED7]/20",   // BLUE bg
-      iconColor: "#0B5ED7",       // BLUE icon
+      color: "bg-[#0B5ED7]/20",
+      iconColor: "#0B5ED7",
+      path: "/service", // Added path
     },
     {
       title: "Servicing & Repairs",
       desc: "Full vehicle servicing and repairs including brakes, suspension, and maintenance.",
       icon: <FaTools />,
-      color: "bg-[#D70C09]/20",   // RED bg
-      iconColor: "#D70C09",       // RED icon
+      color: "bg-[#D70C09]/20",
+      iconColor: "#D70C09",
+      path: "/service", // Added path
     },
     {
       title: "Engine Tuning",
       desc: "Professional engine tuning and performance optimization to enhance efficiency and power.",
       icon: <FaCarSide />,
-      color: "bg-[#0B5ED7]/20",   // BLUE bg
-      iconColor: "#0B5ED7",       // BLUE icon
+      color: "bg-[#0B5ED7]/20",
+      iconColor: "#0B5ED7",
+      path: "/service", // Added path
     },
     {
       title: "Air Con Re-Gas",
       desc: "Complete air conditioning servicing and re-gas for optimal cooling performance.",
       icon: <FaSnowflake />,
-      color: "bg-[#D70C09]/20",   // RED bg
-      iconColor: "#D70C09",       // RED icon
+      color: "bg-[#D70C09]/20",
+      iconColor: "#D70C09",
+      path: "/service", // Added path
     },
     {
       title: "Wet Belt Services",
       desc: "Inspection and replacement of wet belts to ensure smooth engine operation.",
       icon: <FaTools />,
-      color: "bg-[#0B5ED7]/20",   // BLUE bg
-      iconColor: "#0B5ED7",       // BLUE icon
+      color: "bg-[#0B5ED7]/20",
+      iconColor: "#0B5ED7",
+      path: "/service", // Added path
     },
   ];
 
@@ -65,7 +68,8 @@ export default function ServicesDark() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="relative rounded-xl p-6 border border-slate-800 hover:border-slate-700 bg-[#0B0E18] transition-all hover:scale-105"
+              onClick={() => navigate(service.path)} // Navigation Trigger
+              className="relative rounded-xl p-6 border border-slate-800 hover:border-slate-700 bg-[#0B0E18] transition-all hover:scale-105 cursor-pointer group"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -78,48 +82,43 @@ export default function ServicesDark() {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-semibold text-white mb-2">
+              <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-[#D70C09] transition-colors">
                 {service.title}
               </h3>
               <p className="text-slate-400 text-sm">{service.desc}</p>
+              
+              {/* Optional indicator */}
+              <div className="mt-4 text-xs font-bold text-[#0B5ED7] opacity-0 group-hover:opacity-100 transition-opacity">
+                LEARN MORE →
+              </div>
             </div>
           ))}
         </div>
 
-       {/* Feature Banner */}
-<div
-  className="mt-20 relative rounded-lg overflow-hidden border border-slate-800 p-12 text-center"
-  data-aos="fade-up"
->
-  {/* Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-tr from-[#0B5ED7]/20 via-transparent to-[#D70C09]/20" />
-
-  {/* Content */}
-  <div className="relative z-10">
-    {/* Heading */}
-    <h3 className="text-3xl font-bold text-white mb-4">
-      Trusted MOT & Vehicle Specialists
-    </h3>
-
-    {/* Description */}
-    <p className="text-slate-300 max-w-2xl mx-auto mb-8">
-      Modern diagnostic tools and experienced technicians ensure reliable MOT
-      testing, repairs, and servicing with honest advice and fast turnaround times.
-    </p>
-
-    {/* Features List */}
-    <ul className="space-y-2 text-sm text-slate-300 flex flex-col items-center">
-      {/* Replace text with image */}
-      <li className="mb-2">
-        <img src="/dvs.png" alt="DVSA Approved" loading="lazy"  className="w-24 h-auto mx-auto" />
-      </li>
-      <li>✔ Modern Diagnostic Equipment</li>
-      <li>✔ Transparent Pricing</li>
-      <li>✔ Customer-First Service</li>
-    </ul>
-  </div>
-</div>
-
+        {/* Feature Banner */}
+        <div
+          className="mt-20 relative rounded-lg overflow-hidden border border-slate-800 p-12 text-center"
+          data-aos="fade-up"
+        >
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#0B5ED7]/20 via-transparent to-[#D70C09]/20" />
+          <div className="relative z-10">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Trusted MOT & Vehicle Specialists
+            </h3>
+            <p className="text-slate-300 max-w-2xl mx-auto mb-8">
+              Modern diagnostic tools and experienced technicians ensure reliable MOT
+              testing, repairs, and servicing with honest advice and fast turnaround times.
+            </p>
+            <ul className="space-y-2 text-sm text-slate-300 flex flex-col items-center">
+              <li className="mb-2">
+                <img src="/dvs.png" alt="DVSA Approved" loading="lazy" className="w-24 h-auto mx-auto" />
+              </li>
+              <li>✔ Modern Diagnostic Equipment</li>
+              <li>✔ Transparent Pricing</li>
+              <li>✔ Customer-First Service</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );
