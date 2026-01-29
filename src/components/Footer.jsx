@@ -79,10 +79,10 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="mailto:causerjennifer@yahoo.co.uk"
+                  href="mailto:njmotcentre@yahoo.com"
                   className="hover:text-[#D70C09] transition break-all"
                 >
-                  causerjennifer@yahoo.co.uk
+                  njmotcentre@yahoo.com
                 </a>
               </li>
             </ul>

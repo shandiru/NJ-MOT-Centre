@@ -112,7 +112,7 @@ const PrivacyPolicy = () => {
                     <div className="text-white">
                       <div className="text-gray-300 space-y-1">
   <p><strong>N&J MOT Centre</strong></p>
-  <p>Email: <a href="mailto:causerjennifer@yahoo.co.uk" className="text-[#D70C09] hover:underline">causerjennifer@yahoo.co.uk</a></p>
+  <p>Email: <a href="mailto:njmotcentre@yahoo.com" className="text-[#D70C09] hover:underline">njmotcentre@yahoo.com</a></p>
   <p>Phone: +44 7746 479840</p>
   <p>Address: Grantham Dr, Skegness PE25 3RN, United Kingdom</p>
 </div>

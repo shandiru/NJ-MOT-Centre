@@ -73,7 +73,7 @@ export default function ContactSection() {
               Phone: <a href="tel:01754879008" className="hover:text-[#D70C09]">01754879008</a>
             </p>
             <p className="text-[#C0C0C0] font-medium mb-1">
-              Email: <a href="mailto:causerjennifer@yahoo.co.uk" className="hover:text-[#D70C09]">causerjennifer@yahoo.co.uk</a>
+              Email: <a href="mailto:njmotcentre@yahoo.com" className="hover:text-[#D70C09]">njmotcentre@yahoo.com</a>
             </p>
             <p className="text-[#C0C0C0] font-medium">
               Address: Grantham Dr, Skegness PE25 3RN, UK
