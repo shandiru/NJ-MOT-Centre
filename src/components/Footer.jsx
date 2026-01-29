@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
-  const mapsUrl = "https://maps.app.goo.gl/PQoeNHRGmgSawQz89";
+  const mapsUrl = "https://www.google.com/maps/dir//N%26J+Mot+Centre+Grantham+Dr+Skegness+PE25+3RN+United+Kingdom/@53.1457689,0.3306119,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x47d7c71ee265360b:0x9c93d005c64c0cd2";
 
   return (
     <footer className="bg-[#000000] border-t border-[#1C1C1C] py-12 text-white">
