@@ -8,7 +8,7 @@ export default function MapSection() {
             className="w-full h-full"
             style={{ border: 0 }}
             loading="lazy"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1958.0157263003894!2d-2.7484085!3d53.45770019999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b1b332a0a173b%3A0xfd8cefc6b473c9e5!2sN%26J%20Autocare%20mot%20station!5e1!3m2!1sen!2slk!4v1765828468097!5m2!1sen!2slk"
+           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2165.5567848153923!2d0.33061189999999996!3d53.14576890000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d7c71ee265360b%3A0x9c93d005c64c0cd2!2sN%26J%20Mot%20Centre!5e1!3m2!1sen!2slk!4v1769705238916!5m2!1sen!2slk"
           ></iframe>
         </div>
       </div>
