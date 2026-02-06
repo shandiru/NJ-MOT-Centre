@@ -126,6 +126,32 @@ export default function NandJServices() {
         "Loss of engine performance",
       ],
     },
+    {
+    key: "dpf",
+    title: "DPF Specialist",
+    desc: "Diesel Particulate Filter Cleaning & Diagnostics",
+    whyTitle: "Why Choose DPF Specialist Services?",
+    whyDesc:
+      "The Diesel Particulate Filter (DPF) is designed to capture harmful soot and reduce emissions. Over time, the filter can become blocked, leading to warning lights, reduced performance, and potential engine damage. Professional DPF servicing ensures your vehicle runs efficiently, complies with emissions regulations, and avoids costly repairs.",
+    benefitsTitle: "Benefits of DPF Specialist Services",
+    benefits: [
+      "Restores engine performance",
+      "Reduces exhaust emissions",
+      "Improves fuel efficiency",
+      "Prevents costly DPF replacement",
+      "Clears dashboard warning lights",
+      "Helps maintain MOT compliance",
+    ],
+    signsTitle: "Signs You Need DPF Specialist Attention",
+    signs: [
+      "DPF or engine warning light illuminated",
+      "Loss of power or limp mode",
+      "Increased fuel consumption",
+      "Frequent regeneration cycles",
+      "Excessive exhaust smoke",
+      "Failed or advisory MOT emissions test",
+    ],
+  },
   ];
 
 
@@ -193,7 +219,7 @@ export default function NandJServices() {
           {/* Service Boxes Container */}
           <div
             ref={scrollRef}
-            className="flex md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 overflow-x-auto pb-6 snap-x snap-mandatory no-scrollbar"
+            className="flex md:grid md:grid-cols-3 lg:grid-cols-6 gap-4 overflow-x-auto pb-6 snap-x snap-mandatory no-scrollbar"
           >
             {services.map((s) => (
               <div

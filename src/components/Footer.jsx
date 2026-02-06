@@ -27,7 +27,7 @@ export default function Footer() {
 
             <p className="text-[#C0C0C0] mt-3 text-sm leading-relaxed">
               Professional MOT testing, servicing, and engine tuning. 
-              Trusted for repairs, air con regass, wet belts, and MOT classes 4, 5 & 7.
+              Trusted for repairs, air con re-gas, wet belts, and MOT classes 4, 5 & 7.
             </p>
           </div>
 
@@ -36,7 +36,7 @@ export default function Footer() {
             <h3 className="font-bold mb-4 text-lg brand-gradient">Services</h3>
             <ul className="space-y-2 text-[#C0C0C0] text-sm">
               <li className="hover:text-[#D70C09] transition">Services & Repairs</li>
-              <li className="hover:text-[#D70C09] transition">Air Con Regass</li>
+              <li className="hover:text-[#D70C09] transition">Air Con re-gas</li>
               <li className="hover:text-[#D70C09] transition">Engine Tuning</li>
               <li className="hover:text-[#D70C09] transition">MOT Class 4, 5 & 7</li>
               <li className="hover:text-[#D70C09] transition">Wet Belts</li>
