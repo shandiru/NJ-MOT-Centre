@@ -92,7 +92,7 @@ export default function Footer() {
 
         {/* ================= BOTTOM ================= */}
         <div className="border-t border-[#1C1C1C] mt-10 pt-6 text-center text-[#868386] text-sm">
-          <p>&copy; 2025 N&J MOT Centre. All rights reserved.</p>
+          <p>&copy; 2026 N&J MOT Centre. All rights reserved.</p>
         </div>
 
         {/* ================= POWERED BY ================= */}

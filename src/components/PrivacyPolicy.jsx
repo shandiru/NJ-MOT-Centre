@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
                     </p>
                     <ul className="list-disc ml-6 text-white">
                         <li>Respond to inquiries and provide quotes</li>
-                        <li>Deliver scaffolding services</li>
+                        <li>Deliver N&J MOT Centre services</li>
                         <li>Communicate with you about your project</li>
                         <li>Maintain business records and comply with legal requirements</li>
                     </ul>
@@ -110,12 +110,12 @@ const PrivacyPolicy = () => {
                         If you have any questions about this Privacy Policy or how we handle your personal data, please contact us:
                     </p>
                     <div className="text-white">
-                      <div className="text-gray-300 space-y-1">
-  <p><strong>N&J MOT Centre</strong></p>
-  <p>Email: <a href="mailto:njmotcentre@yahoo.com" className="text-[#D70C09] hover:underline">njmotcentre@yahoo.com</a></p>
-  <p>Phone: +44 7746 479840</p>
-  <p>Address: Grantham Dr, Skegness PE25 3RN, United Kingdom</p>
-</div>
+                        <div className="text-gray-300 space-y-1">
+                            <p><strong>N&J MOT Centre</strong></p>
+                            <p>Email: <a href="mailto:njmotcentre@yahoo.com" className="text-[#D70C09] hover:underline">njmotcentre@yahoo.com</a></p>
+                            <p>Phone: 01754879008</p>
+                            <p>Address: Grantham Dr, Skegness PE25 3RN, United Kingdom</p>
+                        </div>
 
                     </div>
                     <p className="mt-2 text-white">
