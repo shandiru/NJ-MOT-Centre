@@ -1,9 +1,9 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
-  const mapsUrl = "https://www.google.com/maps/dir//N%26J+Mot+Centre+Grantham+Dr+Skegness+PE25+3RN+United+Kingdom/@53.1457689,0.3306119,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x47d7c71ee265360b:0x9c93d005c64c0cd2";
+  const mapsUrl =
+    "https://www.google.com/maps/dir//N%26J+Mot+Centre+Grantham+Dr+Skegness+PE25+3RN+United+Kingdom/@53.1457689,0.3306119,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x47d7c71ee265360b:0x9c93d005c64c0cd2";
 
   return (
     <footer className="bg-[#000000] border-t border-[#1C1C1C] py-12 text-white">
@@ -11,9 +11,8 @@ export default function Footer() {
 
         <div className="grid md:grid-cols-3 gap-8">
 
-          {/* ================= COMPANY INFO ================= */}
+          {/* COMPANY INFO */}
           <div>
-            {/* Logo */}
             <img
               src="/logo.png"
               alt="N&J MOT Centre Logo"
@@ -26,32 +25,47 @@ export default function Footer() {
             </h2>
 
             <p className="text-[#C0C0C0] mt-3 text-sm leading-relaxed">
-              Professional MOT testing, servicing, and engine tuning. 
+              Professional MOT testing, servicing, and engine tuning.
               Trusted for repairs, air con re-gas, wet belts, and MOT classes 4, 5 & 7.
             </p>
+
+            {/* IMAGE - DESKTOP ONLY */}
+            <img
+              src="/footer.jpeg"
+              alt="garage"
+              className="hidden lg:block mt-6 w-48 opacity-80"
+            />
           </div>
 
-          {/* ================= SERVICES ================= */}
+          {/* SERVICES */}
           <div>
             <h3 className="font-bold mb-4 text-lg brand-gradient">Services</h3>
+
             <ul className="space-y-2 text-[#C0C0C0] text-sm">
               <li className="hover:text-[#D70C09] transition">Services & Repairs</li>
               <li className="hover:text-[#D70C09] transition">Air Con re-gas</li>
               <li className="hover:text-[#D70C09] transition">Engine Tuning</li>
               <li className="hover:text-[#D70C09] transition">MOT Class 4, 5 & 7</li>
               <li className="hover:text-[#D70C09] transition">Wet Belts</li>
+
               <li>
-                <Link to="/privacy-policy" className="hover:text-[#D70C09]">Privacy Policy</Link>
+                <Link to="/privacy-policy" className="hover:text-[#D70C09]">
+                  Privacy Policy
+                </Link>
               </li>
+
               <li>
-                <Link to="/terms-conditions" className="hover:text-[#D70C09]">Terms & Conditions</Link>
+                <Link to="/terms-conditions" className="hover:text-[#D70C09]">
+                  Terms & Conditions
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* ================= CONTACT INFO ================= */}
+          {/* CONTACT INFO */}
           <div>
             <h3 className="font-bold mb-4 text-lg brand-gradient">Contact Info</h3>
+
             <ul className="space-y-2 text-[#C0C0C0] text-sm">
               <li>N&J MOT CENTRE</li>
 
@@ -86,16 +100,23 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+
+            {/* IMAGE - MOBILE & TABLET */}
+            <img
+              src="/footer.jpeg"
+              alt="garage"
+              className="mt-6 w-40 opacity-80 block lg:hidden"
+            />
           </div>
 
         </div>
 
-        {/* ================= BOTTOM ================= */}
+        {/* BOTTOM */}
         <div className="border-t border-[#1C1C1C] mt-10 pt-6 text-center text-[#868386] text-sm">
           <p>&copy; 2026 N&J MOT Centre. All rights reserved.</p>
         </div>
 
-        {/* ================= POWERED BY ================= */}
+        {/* POWERED BY */}
         <div className="mt-2 text-center text-[#868386] text-sm">
           <p>
             Powered by{" "}
@@ -112,7 +133,6 @@ export default function Footer() {
 
       </div>
 
-      {/* ================= BRAND GRADIENT ================= */}
       <style jsx global>{`
         .brand-gradient {
           background: linear-gradient(90deg, #0B5ED7, #D70C09, #ffffff);
