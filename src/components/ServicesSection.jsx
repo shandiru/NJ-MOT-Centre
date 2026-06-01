@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import the hook
-import { FaCarSide, FaTools, FaSnowflake } from "react-icons/fa";
+import { FaCarSide, FaTools, FaSnowflake, FaCheck } from "react-icons/fa";
 
 export default function ServicesDark() {
   const navigate = useNavigate(); // Initialize navigation
@@ -86,7 +86,7 @@ export default function ServicesDark() {
                 {service.title}
               </h3>
               <p className="text-slate-400 text-sm">{service.desc}</p>
-              
+
               {/* Optional indicator */}
               <div className="mt-4 text-xs font-bold text-[#0B5ED7] opacity-0 group-hover:opacity-100 transition-opacity">
                 LEARN MORE →
@@ -109,13 +109,30 @@ export default function ServicesDark() {
               Modern diagnostic tools and experienced technicians ensure reliable MOT
               testing, repairs, and servicing with honest advice and fast turnaround times.
             </p>
-            <ul className="space-y-2 text-sm text-slate-300 flex flex-col items-center">
+            import {FaCheck} from 'react-icons/fa';
+
+            // Inside your component return:
+            <ul className="space-y-3 text-sm text-slate-300 flex flex-col items-center">
               <li className="mb-2">
-                <img src="/dvs.png" alt="DVSA Approved" loading="lazy" className="w-24 h-auto mx-auto" />
+                <img
+                  src="/dvs.png"
+                  alt="DVSA Approved"
+                  loading="lazy"
+                  className="w-24 h-auto mx-auto"
+                />
               </li>
-              <li>✔ Modern Diagnostic Equipment</li>
-              <li>✔ Transparent Pricing</li>
-              <li>✔ Customer-First Service</li>
+              <li className="flex items-center gap-2">
+                <FaCheck className="text-emerald-500 text-xs" />
+                <span>Modern Diagnostic Equipment</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaCheck className="text-emerald-500 text-xs" />
+                <span>Transparent Pricing</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaCheck className="text-emerald-500 text-xs" />
+                <span>Customer-First Service</span>
+              </li>
             </ul>
           </div>
         </div>

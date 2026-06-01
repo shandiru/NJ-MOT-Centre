@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function MapSection() {
   return (
     <section className="relative py-20 bg-[#0B1220] text-white">

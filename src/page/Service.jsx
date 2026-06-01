@@ -12,27 +12,20 @@ export default function Service() {
     <div>
       {/* Hero */}
       <section >
-       <WheelTyreHero />
+        <WheelTyreHero />
       </section>
-         <section >
-       {/* <WheelAlignmentServices /> */}
+      <section >
       </section>
-        <section >
-       <TyreServices />
+      <section >
+        <TyreServices />
       </section>
-        <section >
-    
-      </section>
+      <section >
 
-       <section >
-       <EmergencyCTA />
       </section>
 
-
-
-
-
-   
+      <section >
+        <EmergencyCTA />
+      </section>
     </div>
   );
 }
