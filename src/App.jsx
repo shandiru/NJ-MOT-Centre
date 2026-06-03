@@ -24,7 +24,7 @@ function App() {
 
   return (
     <Router>
-       <ScrollToHash />
+      <ScrollToHash />
       <ScrollToTop />
       <Header />
 
