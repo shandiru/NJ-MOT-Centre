@@ -88,7 +88,7 @@ export default function HeroSection() {
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 md:gap-8 mt-10 md:mt-20 items-stretch">
+          <div className="mt-10 hidden grid-cols-1 gap-5 items-stretch md:mt-20 md:grid md:grid-cols-2 md:gap-8 xl:grid-cols-4">
             {featureCards.map((item, idx) => (
               <div
                 key={idx}
