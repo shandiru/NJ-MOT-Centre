@@ -6,7 +6,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  const Number = "+44 1744 371225";
+  const phoneNumber = "01754879008";
   const bookingUrl = "https://www.bookinmycar.co.uk/book_online/?key=17-987w54-soiubs0r780bu0erwgh4S00587309f09f8g09bndorlfs-89048f&g=1&sl=fbKXB";
 
   const scrollWithOffset = (el) => {
@@ -74,7 +74,7 @@ export default function Header() {
 
               {/* Call Button Mobile/Tablet */}
               <a
-                href={`tel:${Number}`}
+                href={`tel:${phoneNumber}`}
                 rel="noopener noreferrer"
                 aria-label="Call on WhatsApp"
                 className="lg:hidden inline-flex items-center justify-center rounded-lg p-2 text-red-400 hover:text-white hover:bg-red-500/20 transition-colors"

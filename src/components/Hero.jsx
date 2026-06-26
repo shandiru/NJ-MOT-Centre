@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { FaCar, FaTools, FaSnowflake, FaTimes } from "react-icons/fa";
 
@@ -7,6 +7,33 @@ export default function HeroSection() {
   const PHONE = "01754879008";
   const TEL_LINK = "tel:01754879008";
   const BOOKING_URL = "https://www.bookinmycar.co.uk/book_online/?key=17-987w54-soiubs0r780bu0erwgh4S00587309f09f8g09bndorlfs-89048f&g=1&sl=fbKXB";
+  const featureCards = [
+    {
+      icon: <FaCar />,
+      title: "MOT Class 4, 5 & 7",
+      text: "Certified MOT testing for cars, vans and light commercials.",
+      color: "var(--primary)",
+    },
+    {
+      icon: <FaTools />,
+      title: "Servicing & Repairs",
+      text: "Diagnostics, tuning, wet belts and full vehicle repairs.",
+      color: "var(--accent)",
+    },
+    {
+      icon: <FaSnowflake />,
+      title: "Engine Tuning",
+      text: "Professional engine tuning to maximize power and efficiency.",
+      color: "var(--primary)",
+    },
+    {
+      image: "/forte.jpeg",
+      imageAlt: "FORTÉ Authorised Service Centre",
+      title: "FORTÉ Authorised Service Centre",
+      text: "Workshop-grade fuel and engine treatments for cleaner performance and better everyday efficiency.",
+      color: "var(--accent)",
+    },
+  ];
 
   // State to control Popup
   const [isOpen, setIsOpen] = useState(false);
@@ -61,18 +88,34 @@ export default function HeroSection() {
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-            {[ 
-              { icon: <FaCar />, title: "MOT Class 4, 5 & 7", text: "Certified MOT testing for cars, vans and light commercials.", color: "var(--primary)" },
-              { icon: <FaTools />, title: "Servicing & Repairs", text: "Diagnostics, tuning, wet belts and full vehicle repairs.", color: "var(--accent)" },
-              { icon: <FaSnowflake />, title: "Engine Tuning", text: "Professional engine tuning to maximize power and efficiency.", color: "var(--primary)" }
-            ].map((item, idx) => (
-              <div key={idx} className="text-center p-6 rounded-xl bg-gray-800/40 backdrop-blur-sm" data-aos="fade-up" data-aos-delay={600 + (idx * 200)}>
-                <div className="mx-auto mb-4 h-16 w-16 rounded-full flex items-center justify-center text-2xl" style={{ backgroundColor: `${item.color}33`, color: item.color }}>
-                  {item.icon}
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-300">{item.text}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-20 items-stretch">
+            {featureCards.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex h-full flex-col text-center p-6 rounded-xl bg-gray-800/40 backdrop-blur-sm"
+                data-aos="fade-up"
+                data-aos-delay={600 + (idx * 200)}
+              >
+                {item.image ? (
+                  <div className="mx-auto mb-4 flex h-16 items-center justify-center">
+                    <img
+                      src={item.image}
+                      alt={item.imageAlt}
+                      className="h-16 w-auto rounded-md bg-white/95 p-2"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : (
+                  <div className="mx-auto mb-4 h-16 w-16 rounded-full flex items-center justify-center text-2xl" style={{ backgroundColor: `${item.color}33`, color: item.color }}>
+                    {item.icon}
+                  </div>
+                )}
+                <h3 className="mb-2 flex min-h-[56px] items-center justify-center text-lg font-semibold text-white">
+                  {item.title}
+                </h3>
+                <p className="flex flex-1 items-start justify-center text-sm text-gray-300">
+                  {item.text}
+                </p>
               </div>
             ))}
           </div>
