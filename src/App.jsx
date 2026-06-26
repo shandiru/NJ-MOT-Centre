@@ -11,7 +11,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import GDPRBanner from "./components/GDPRBanner";
 import Service from "./page/Service";
-import ScrollToHash from "../src/components/ScrollToHash"
+import ScrollToHash from "../src/components/ScrollToHash";
+import NotFound from "./page/NotFound";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -33,6 +34,7 @@ function App() {
         <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/service" element={<Service />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />
