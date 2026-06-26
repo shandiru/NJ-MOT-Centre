@@ -158,6 +158,20 @@ export default function NandJServices() {
   const [activeService, setActiveService] = useState(services[0]);
   const scrollRef = useRef(null);
   const contentRef = useRef(null);
+  const wetBeltGalleryImages = [
+    { src: "/w1.jpeg", alt: "Wet Belt service detail 1" },
+    { src: "/w2.jpeg", alt: "Wet Belt service detail 2" },
+    { src: "/w3.jpeg", alt: "Wet Belt service detail 3" },
+    { src: "/w4.jpeg", alt: "Wet Belt service detail 4" },
+    { src: "/w5.jpeg", alt: "Wet Belt service detail 5" },
+    { src: "/w6.jpeg", alt: "Wet Belt service detail 6" },
+    { src: "/w7.jpeg", alt: "Wet Belt service detail 7" },
+    { src: "/w8.jpeg", alt: "Wet Belt service detail 8" },
+    { src: "/w9.jpeg", alt: "Wet Belt service detail 9" },
+    { src: "/w10.jpeg", alt: "Wet Belt service detail 10" },
+    { src: "/w11.jpeg", alt: "Wet Belt service detail 11" },
+    { src: "/w12.jpeg", alt: "Wet Belt service detail 12" },
+  ];
 
   // Improved scroll function to move exactly ONE box at a time
   const scroll = (direction) => {
@@ -281,6 +295,37 @@ export default function NandJServices() {
             </ul>
           </div>
         </div>
+
+        {activeService.key === "wetbelt" && (
+          <div className="mt-16 pt-12 border-t border-slate-800">
+            <div className="text-center mb-10">
+              <h3 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#FFFFFF" }}>
+                Wet Belt Service Gallery
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+              {wetBeltGalleryImages.map((image, index) => (
+                <figure
+                  key={image.src}
+                  className={`group relative overflow-hidden rounded-2xl border border-slate-800 bg-[#0B0E18] shadow-lg ${
+                    index === 0 || index === 5 ? "md:col-span-2 md:row-span-2" : ""
+                  }`}
+                >
+                  <div className="relative aspect-[4/3] h-full w-full">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/85 via-[#020617]/10 to-transparent opacity-90" />
+                  </div>
+                </figure>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
