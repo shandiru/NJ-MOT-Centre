@@ -33,8 +33,8 @@ export default function Header() {
             <div className="flex items-center min-w-0">
               <img
                 src="/logo.png"
-                alt="Broadway"
-                className="rounded-full w-full h-14 lg:w-full lg:h-16 flex-shrink-0"
+                alt="N&J MOT Centre"
+                className="h-11 w-auto max-w-[220px] object-contain sm:h-12 lg:h-16 flex-shrink-0"
                 loading="lazy"
               />
             </div>

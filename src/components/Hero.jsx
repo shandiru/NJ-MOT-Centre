@@ -41,7 +41,7 @@ export default function HeroSection() {
  
 
   return (
-    <section className="relative bg-black overflow-hidden py-20 md:py-36" id="home">
+    <section className="relative bg-black overflow-hidden py-16 md:py-36" id="home">
       {/* Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -59,12 +59,12 @@ export default function HeroSection() {
 
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="mb-4 text-[2.2rem] font-bold leading-[1.05] text-white sm:text-5xl md:mb-6 md:text-6xl" data-aos="fade-up">
+          <h1 className="mb-3 text-[1.95rem] font-bold leading-[1.02] text-white sm:text-5xl md:mb-6 md:text-6xl" data-aos="fade-up">
             Professional MOT & Vehicle
             <span className="block" style={{ color: "var(--primary)" }}>Servicing in Skegness</span>
           </h1>
 
-          <p className="mb-8 max-w-3xl mx-auto text-base leading-7 text-gray-200 sm:text-lg md:mb-10 md:text-xl" data-aos="fade-up" data-aos-delay="200">
+          <p className="mb-6 max-w-[20rem] mx-auto text-[15px] leading-6 text-gray-200 sm:max-w-3xl sm:text-lg sm:leading-7 md:mb-10 md:text-xl" data-aos="fade-up" data-aos-delay="200">
             N&J MOT Centre offers MOT Class 4, 5 & 7 testing, vehicle servicing, repairs, air conditioning re-gas, engine tuning and wet belt services.
           </p>
 
@@ -72,7 +72,7 @@ export default function HeroSection() {
             {/* Open Popup Button */}
             <button
               onClick={() => setIsOpen(true)}
-              className="h-12 w-full sm:w-auto px-10 rounded-md text-white font-medium flex items-center justify-center transition hover:brightness-110"
+              className="h-11 w-full sm:h-12 sm:w-auto px-10 rounded-md text-white font-medium flex items-center justify-center transition hover:brightness-110"
               style={{ backgroundColor: "var(--primary)" }}
             >
               Book Now
@@ -80,7 +80,7 @@ export default function HeroSection() {
 
             <a
               href={TEL_LINK}
-              className="h-12 w-full sm:w-auto px-10 rounded-md text-white font-medium flex items-center justify-center border transition hover:bg-white/10"
+              className="h-11 w-full sm:h-12 sm:w-auto px-10 rounded-md text-white font-medium flex items-center justify-center border transition hover:bg-white/10"
               style={{ borderColor: "var(--accent)" }}
             >
               Call Now: {PHONE}
@@ -88,32 +88,32 @@ export default function HeroSection() {
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 mt-14 md:mt-20 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 md:gap-8 mt-10 md:mt-20 items-stretch">
             {featureCards.map((item, idx) => (
               <div
                 key={idx}
-                className="flex h-full flex-col text-center p-6 rounded-xl bg-gray-800/40 backdrop-blur-sm"
+                className="flex h-full flex-col rounded-xl bg-gray-800/40 p-5 text-center backdrop-blur-sm sm:p-6"
                 data-aos="fade-up"
                 data-aos-delay={600 + (idx * 200)}
               >
                 {item.image ? (
-                  <div className="mx-auto mb-4 flex h-16 items-center justify-center">
+                  <div className="mx-auto mb-3 flex h-14 items-center justify-center sm:mb-4 sm:h-16">
                     <img
                       src={item.image}
                       alt={item.imageAlt}
-                      className="h-16 w-auto rounded-md bg-white/95 p-2"
+                      className="h-14 w-auto rounded-md bg-white/95 p-2 sm:h-16"
                       loading="lazy"
                     />
                   </div>
                 ) : (
-                  <div className="mx-auto mb-4 h-16 w-16 rounded-full flex items-center justify-center text-2xl" style={{ backgroundColor: `${item.color}33`, color: item.color }}>
+                  <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full text-xl sm:mb-4 sm:h-16 sm:w-16 sm:text-2xl" style={{ backgroundColor: `${item.color}33`, color: item.color }}>
                     {item.icon}
                   </div>
                 )}
-                <h3 className="mb-2 flex min-h-[56px] items-center justify-center text-lg font-semibold text-white">
+                <h3 className="mb-2 flex min-h-[48px] items-center justify-center text-base font-semibold text-white sm:min-h-[56px] sm:text-lg">
                   {item.title}
                 </h3>
-                <p className="flex flex-1 items-start justify-center text-sm text-gray-300">
+                <p className="flex flex-1 items-start justify-center text-sm leading-6 text-gray-300">
                   {item.text}
                 </p>
               </div>
