@@ -41,7 +41,7 @@ export default function HeroSection() {
  
 
   return (
-    <section className="relative bg-black overflow-hidden py-28 md:py-36" id="home">
+    <section className="relative bg-black overflow-hidden py-20 md:py-36" id="home">
       {/* Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -59,20 +59,20 @@ export default function HeroSection() {
 
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white" data-aos="fade-up">
+          <h1 className="mb-4 text-[2.2rem] font-bold leading-[1.05] text-white sm:text-5xl md:mb-6 md:text-6xl" data-aos="fade-up">
             Professional MOT & Vehicle
             <span className="block" style={{ color: "var(--primary)" }}>Servicing in Skegness</span>
           </h1>
 
-          <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-gray-200" data-aos="fade-up" data-aos-delay="200">
+          <p className="mb-8 max-w-3xl mx-auto text-base leading-7 text-gray-200 sm:text-lg md:mb-10 md:text-xl" data-aos="fade-up" data-aos-delay="200">
             N&J MOT Centre offers MOT Class 4, 5 & 7 testing, vehicle servicing, repairs, air conditioning re-gas, engine tuning and wet belt services.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-5 justify-center" data-aos="fade-up" data-aos-delay="400">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center" data-aos="fade-up" data-aos-delay="400">
             {/* Open Popup Button */}
             <button
               onClick={() => setIsOpen(true)}
-              className="h-12 px-10 rounded-md text-white font-medium flex items-center justify-center transition hover:brightness-110"
+              className="h-12 w-full sm:w-auto px-10 rounded-md text-white font-medium flex items-center justify-center transition hover:brightness-110"
               style={{ backgroundColor: "var(--primary)" }}
             >
               Book Now
@@ -80,7 +80,7 @@ export default function HeroSection() {
 
             <a
               href={TEL_LINK}
-              className="h-12 px-10 rounded-md text-white font-medium flex items-center justify-center border transition hover:bg-white/10"
+              className="h-12 w-full sm:w-auto px-10 rounded-md text-white font-medium flex items-center justify-center border transition hover:bg-white/10"
               style={{ borderColor: "var(--accent)" }}
             >
               Call Now: {PHONE}
@@ -88,7 +88,7 @@ export default function HeroSection() {
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-20 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 mt-14 md:mt-20 items-stretch">
             {featureCards.map((item, idx) => (
               <div
                 key={idx}
