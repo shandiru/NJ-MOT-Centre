@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from "../components/Hero";
+import HeroMobileFeatures from "../components/HeroMobileFeatures";
 import Service from "../components/ServicesSection";
 import About from "../components/About";
 import Review from "../components/Review";
@@ -9,6 +10,7 @@ const Home = () => {
     return (
         <div>
             <Hero />
+            <HeroMobileFeatures />
             <About />
             <Service />
             <Review />
